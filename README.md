@@ -22,7 +22,7 @@ session = conn('user',passwd,'localhost','3306','airflow')
 5. Finally, when defining your DAG `DAG_airflow_db_cleaner = DAG( .... )` you can adjust the `start_date` parameter.  
 If everything is ok, it is done!
 
-# How it work?
+# How it works?
 By default, every 15 days the DAG performs the following cleanings:
  - Table `log`: all the logs stored before the current date will be deleted.
  - Table `task_instance`: all records older than 15 days will be deleted, but not the last one.
